@@ -1,0 +1,35 @@
+{
+  "name": "json-io",
+  "version": "1.0.0",
+  "description": "A small wrapper to load and save data to a json file via GET and PUT requests. Conveniences like defaults for non-existant or deleted files. Great for editting JSON files via tools. Relies on file-io-server.",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Tomasz Dysinski",
+    "email": "oz@bunnybones.com",
+    "url": "https://github.com/bunnybones1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chalk": "^0.5.1",
+    "file-io-server": "^1.0.5",
+    "shelljs": "^0.3.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "json",
+    "io",
+    "get",
+    "put"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bunnybones1/json-io.git"
+  },
+  "homepage": "https://github.com/bunnybones1/json-io",
+  "bugs": {
+    "url": "https://github.com/bunnybones1/json-io/issues"
+  }
+}

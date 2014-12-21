@@ -102,7 +102,7 @@ JSONIO.prototype = {
 }
 
 //module parameters
-JSONIO.setPort(port) {
+JSONIO.setPort = function (port) {
 	JSONIO.port = port;
 	JSONIO.debugLevel = 0;
 	var loc = window.location;

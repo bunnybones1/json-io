@@ -1,6 +1,6 @@
 {
   "name": "json-io",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A small wrapper to load and save data to a json file via GET and PUT requests. Conveniences like defaults for non-existant or deleted files. Great for editting JSON files via tools. Relies on file-io-server.",
   "main": "index.js",
   "license": "MIT",

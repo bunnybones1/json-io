@@ -83,7 +83,7 @@ function JSONIO(filePath, defaultData, callback, errorCallback) {
 		},
 		function(response) {
 			if(JSONIO.debugLevel >= 1) console.log(response);
-			put(_this.fileioPath, JSON.stringify(defaultData), function(response) {
+			put(_this.fileioPath, JSON.stringify(defaultData, undefined, JSONIO.pretty ? '\t' : undefined), function(response) {
 				console.log(response);
 				_this.data = defaultData;
 				if(callback) callback();
@@ -94,7 +94,7 @@ function JSONIO(filePath, defaultData, callback, errorCallback) {
 
 JSONIO.prototype = {
 	save: function(callback, errorCallback) {
-		put(this.fileioPath, JSON.stringify(this.data), callback, errorCallback);
+		put(this.fileioPath, JSON.stringify(this.data, undefined, JSONIO.pretty ? '\t' : undefined), callback, errorCallback);
 	},
 	load: function(callback, errorCallback) {
 		getJSON(this.fileioPath, callback, errorCallback)
@@ -109,5 +109,7 @@ JSONIO.setPort = function (port) {
 	JSONIO.fileIOServerString = loc.protocol + '//' + loc.hostname + ':' + JSONIO.port + loc.pathname;
 }
 JSONIO.setPort(3000);
+
+JSONIO.pretty = true;
 
 module.exports = JSONIO;
